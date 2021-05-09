@@ -1,0 +1,11 @@
+/**
+ * Styles are split into three files:
+ * (1) layout.css - defines the locations and dimensions of the basic page structures.
+ * (2) elements.css - defines some common structural styles for elements that may be
+ *     used by pages - e.g. half-width tables
+ * (3) theme-1.css - defines colours/borders/fonts etc.
+ */
+@import url('layout.css');
+@import url('elements.css');
+@import url('theme-1.css');
+@import url('theme-2.css');

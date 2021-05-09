@@ -1,0 +1,106 @@
+.page-positioning {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.page-header-positioning {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.page-main-area-positioning {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+/**
+ * Main content page
+ */
+#content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#content #content-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50px;
+}
+#content #content-header #content-open-search {
+  display: inline-block;
+  float: right;
+  padding: 5px;
+}
+#content #content-main-area {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  top: 50px;
+}
+#content #content-main-area #content-page-container {
+  max-width: 650px;
+  margin: auto;
+}
+#content-title {
+  margin: 5px;
+  padding: 0;
+  font-size: 24pt;
+}
+/**
+ * Search page
+ */
+#search {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: white;
+}
+#search #search-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50px;
+}
+#search #search-header #search-close {
+  display: inline-block;
+  float: right;
+  padding: 5px;
+}
+#search #search-header #search-title {
+  margin: 5px;
+  padding: 0;
+  font-size: 24pt;
+}
+#search #search-main-area {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  top: 50px;
+}
+#search #search-main-area #search-page-container {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 49px;
+  border-top: white 1px solid;
+}
+#search #search-main-area #search-page-container #search-term {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}

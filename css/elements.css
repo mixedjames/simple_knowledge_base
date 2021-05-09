@@ -1,0 +1,7 @@
+table {
+  caption-side: bottom;
+  width: 100%;
+}
+.half-width table {
+  width: 50%;
+}

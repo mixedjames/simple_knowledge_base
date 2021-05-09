@@ -1,0 +1,68 @@
+<header class="content-header">
+<h1 class="title">Testing Pandoc Markdown</h1>
+<p class="author">James Heggie</p>
+<p class="date">04/05/2021</p>
+</header>
+
+<section id="this-is-a-title" class="level1 title">
+<h1 class="title">This is a title</h1>
+<p>This is a table:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">A</th>
+<th style="text-align: left;">B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">3.132</td>
+<td style="text-align: left;">42</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6.264</td>
+<td style="text-align: left;">84</td>
+</tr>
+</tbody>
+</table>
+<p>And this is a line after the markdown.</p>
+<figure>
+<img src="notes/logo.svg" alt="The Firefox logo" /><figcaption aria-hidden="true">The Firefox logo</figcaption>
+</figure>
+<p>And this is a blockquote:</p>
+<blockquote>
+<p>This is a blockquote split over more than one line in the source code although of course that isn’t how it will be rendered.</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<section id="title2" class="level2">
+<h2>Some definitions</h2>
+<dl>
+<dt>Statistic</dt>
+<dd>An estimate for a population parameter
+</dd>
+<dt>Population</dt>
+<dd>The complete set of all members of interest. Note that even with unlimited sampling the whole population may not be represented in a sample as there may be members of the class who have yet to be born.
+</dd>
+</dl>
+<p>Followed by <a href="https://www.google.com/" title="Google!">a link</a> and <a href="#title2">another one</a></p>
+</section>
+<section id="some-other-bits-and-pieces" class="level2">
+<h2>Some other bits and pieces</h2>
+<div id="special">
+<p>This is a div<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> which also contains <span id="my-span" style="color:blue">a custom span!</span></p>
+</div>
+</section>
+<section id="footnotes" class="level2">
+<h2>Footnotes…</h2>
+</section>
+</section>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>This is a footnote! Look at it go. It might contain something useful, but probably not.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+body.theme-1 {
+
+  font-family: 'Noto Serif', serif;
+
+  #content-header {
+    border-bottom: solid 1px lightgrey;
+  }
+
+  #search-header {
+    border-bottom: solid 1px lightgrey;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .content-header {
+    text-align: center;
+    margin-top: 20pt;
+
+    padding-bottom: 20pt;
+    border-bottom: lightgrey solid 1px;
+    margin-bottom: 20pt;
+
+    h1 {
+      font-size: 300%;
+      font-weight: 300;
+      margin-top: 20pt;
+      margin-bottom: 10pt;
+    }
+
+    .author {
+      font-style: italic;
+      font-size: 80%;
+    }
+
+    .date {
+      font-style: italic;
+      font-size: 80%;
+    }
+  }
+
+  h1 {
+    font-size: 200%;
+  }
+
+  blockquote {
+    border-left: solid lightgrey 5px;
+    padding-left: 10px;
+  }
+
+  table {
+
+    border-collapse: collapse;
+
+    caption {
+      font-size: 80%;
+      font-style: italic;
+      text-align: left;
+
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    caption::before {
+      content: "Table: ";
+    }
+
+
+    td {
+      border: solid rgb(201, 201, 201) 1px;
+    }
+
+    thead th {
+      background: rgb(165, 165, 165);
+    }
+
+    tbody {
+
+      tr td {
+        background: rgb(237, 237, 237);
+      }
+
+      tr:nth-child(2n) td {
+        background: white;
+      }
+
+    }
+
+  } /* table */
+
+  pre.sourceCode {
+
+    color: lightgrey;
+    background: rgb(38, 50, 56);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+
+    counter-reset: code-lines;
+
+    code>span::before {
+      counter-increment: code-lines;
+      content: counter(code-lines);
+      padding-right: 10px;
+    }
+
+    code {
+      .dt { color: rgb(151, 135, 173); }
+      .op { color: rgb(151, 188, 204); }
+    }
+  }
+
+}

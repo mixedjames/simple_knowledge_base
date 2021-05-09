@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUQjIg1_i6t8kCHKm45_Qphzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notoserif/v9/ga6Iaw1J5X9T9RW6j9bNTFA.ttf) format('truetype');
+}
+body.theme-1 {
+  font-family: 'Noto Serif', serif;
+  /* table */
+}
+body.theme-1 #content-header {
+  border-bottom: solid 1px lightgrey;
+}
+body.theme-1 #search-header {
+  border-bottom: solid 1px lightgrey;
+}
+body.theme-1 h1,
+body.theme-1 h2,
+body.theme-1 h3,
+body.theme-1 h4,
+body.theme-1 h5,
+body.theme-1 h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+body.theme-1 .content-header {
+  text-align: center;
+  margin-top: 20pt;
+  padding-bottom: 20pt;
+  border-bottom: lightgrey solid 1px;
+  margin-bottom: 20pt;
+}
+body.theme-1 .content-header h1 {
+  font-size: 300%;
+  font-weight: 300;
+  margin-top: 20pt;
+  margin-bottom: 10pt;
+}
+body.theme-1 .content-header .author {
+  font-style: italic;
+  font-size: 80%;
+}
+body.theme-1 .content-header .date {
+  font-style: italic;
+  font-size: 80%;
+}
+body.theme-1 h1 {
+  font-size: 200%;
+}
+body.theme-1 blockquote {
+  border-left: solid lightgrey 5px;
+  padding-left: 10px;
+}
+body.theme-1 table {
+  border-collapse: collapse;
+}
+body.theme-1 table caption {
+  font-size: 80%;
+  font-style: italic;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body.theme-1 table caption::before {
+  content: "Table: ";
+}
+body.theme-1 table td {
+  border: solid #c9c9c9 1px;
+}
+body.theme-1 table thead th {
+  background: #a5a5a5;
+}
+body.theme-1 table tbody tr td {
+  background: #ededed;
+}
+body.theme-1 table tbody tr:nth-child(2n) td {
+  background: white;
+}
+body.theme-1 pre.sourceCode {
+  color: lightgrey;
+  background: #263238;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  counter-reset: code-lines;
+}
+body.theme-1 pre.sourceCode code > span::before {
+  counter-increment: code-lines;
+  content: counter(code-lines);
+  padding-right: 10px;
+}
+body.theme-1 pre.sourceCode code .dt {
+  color: #9787ad;
+}
+body.theme-1 pre.sourceCode code .op {
+  color: #97bccc;
+}

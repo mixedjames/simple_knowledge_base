@@ -1,0 +1,4 @@
+SRC = \
+	notes/test.md \
+	notes/table-test/table-test.md \
+	notes/format-test/test.md

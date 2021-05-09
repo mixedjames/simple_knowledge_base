@@ -1,0 +1,106 @@
+.page-positioning {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.page-header-positioning {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.page-main-area-positioning {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+/**
+ * Main content page
+ */
+#content {
+  .page-positioning();
+
+  #content-header {
+    .page-header-positioning();
+    height: 50px;
+
+    #content-open-search {
+      display: inline-block;
+      float: right;
+      padding: 5px;
+    }
+
+  }
+
+  #content-main-area {
+    .page-main-area-positioning();
+    top: 50px;
+
+    #content-page-container {
+      max-width: 650px;
+      margin: auto;
+    }
+  }
+
+}
+
+
+#content-title {
+  margin: 5px;
+  padding: 0;
+  font-size: 24pt;
+}
+
+/**
+ * Search page
+ */
+#search {
+  .page-positioning();
+  background: white;
+
+  #search-header {
+    .page-header-positioning();
+    height: 50px;
+
+    #search-close {
+      display: inline-block;
+      float: right;
+      padding: 5px;
+    }
+
+    #search-title {
+      margin: 5px;
+      padding: 0;
+      font-size: 24pt;
+    }
+
+  }
+
+  #search-main-area {
+    .page-main-area-positioning();
+    top: 50px;
+
+    #search-page-container {
+      max-width: 600px;
+      margin: auto;
+      margin-top: 49px;
+      border-top: white 1px solid;
+
+      #search-term {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+    }
+
+  }
+
+}
