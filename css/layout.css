@@ -51,6 +51,7 @@
 #content #content-main-area #content-page-container {
   max-width: 650px;
   margin: auto;
+  padding: 10px;
 }
 #content-title {
   margin: 5px;
