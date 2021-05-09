@@ -75,6 +75,7 @@ body.theme-1 table td {
   border: solid #c9c9c9 1px;
 }
 body.theme-1 table thead th {
+  border: solid #c9c9c9 1px;
   background: #a5a5a5;
 }
 body.theme-1 table tbody tr td {
@@ -101,4 +102,8 @@ body.theme-1 pre.sourceCode code .dt {
 }
 body.theme-1 pre.sourceCode code .op {
   color: #97bccc;
+}
+body.theme-1 hr {
+  border: 0;
+  border-top: 1px solid lightgrey;
 }
