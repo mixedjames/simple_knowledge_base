@@ -1,16 +1,16 @@
 include ../files.lst
 
 LESS_SRC = \
-	less/main.less \
-	less/elements.less \
-	less/layout.less \
-	less/theme-1.less \
-	less/theme-2.less
+	www/less/main.less \
+	www/less/elements.less \
+	www/less/layout.less \
+	www/less/theme-1.less \
+	www/less/theme-2.less
 
 DST = \
 	$(patsubst %.md,%.html,$(SRC)) \
 	$(patsubst %.md,%.json,$(SRC)) \
-	$(patsubst less/%.less,css/%.css,$(LESS_SRC))
+	$(patsubst www/less/%.less,www/css/%.css,$(LESS_SRC))
 
 VPATH = ../
 
