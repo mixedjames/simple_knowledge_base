@@ -1,4 +1,4 @@
-include ../files.lst
+-include ../files.lst
 
 LESS_SRC = \
 	www/less/main.less \
@@ -18,7 +18,9 @@ VPATH = ../
 	pandoc --template pandoc-template-html.html --section-divs $< -o ../$@
 
 %.json : %.md
-	pandoc $< --template pandoc-template-json.html --to html -o ../$@
+	pandoc $< --template pandoc-template-json.html --to html -o ../$@.tmp
+	./jq-add-filename.bat $(patsubst %.json,%.html,$@) ../$@.tmp ../$@
+	rm ../$@.tmp
 
 www/css/%.css : www/less/%.less
 	lessc $< ../$@
@@ -28,3 +30,6 @@ index.json: $(DST)
 
 touch:
 	cd .. && touch $(SRC)
+
+install-tests:
+	cp ../www/tests/files.lst ../

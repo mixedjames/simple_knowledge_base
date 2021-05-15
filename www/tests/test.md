@@ -56,4 +56,4 @@ This is a div[^1] which also contains [a custom span!]{#my-span style="color:blu
 [^1]: This is a footnote! Look at it go. It might contain something useful, but
       probably not.
 
-[Google]: https://www.google.com/ "Google!"
+[Google]: https://www.google.com/ "Google!

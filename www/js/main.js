@@ -108,7 +108,7 @@ function loadPage(name) {
     const page = index.find(p => p.file == name);
     if (page) {
 
-      fetch('notes/' + name)
+      fetch(name)
       .then(response => {
         if (response.ok) {
           return response.text();
