@@ -20,7 +20,7 @@ VPATH = ../
 %.json : %.md
 	pandoc $< --template pandoc-template-json.html --to html -o ../$@
 
-css/%.css : less/%.less
+www/css/%.css : www/less/%.less
 	lessc $< ../$@
 
 index.json: $(DST)

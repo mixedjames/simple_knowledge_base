@@ -146,6 +146,7 @@ function loadFirstPage() {
   }
   else {
     document.getElementById('search').style.display = 'block';
+    ById('search-term').focus();
   }
 }
 
