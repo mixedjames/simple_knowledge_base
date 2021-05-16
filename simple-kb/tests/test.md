@@ -18,7 +18,7 @@ A     B
 
 And this is a line after the markdown.
 
-![The Firefox logo](notes/logo.svg)
+![The Firefox logo](simple-kb/tests/logo.svg)
 
 And this is a blockquote:
 

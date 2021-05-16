@@ -3,6 +3,6 @@
   "keywords": "tables markdown",
   "author": "James Heggie",
   "title": "Testing tables and markdown",
-  "file": "www/tests/table-test/table-test.html",
+  "file": "simple-kb/tests/table-test/table-test.html",
   "description": "Some tables"
 }

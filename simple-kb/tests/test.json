@@ -3,6 +3,6 @@
   "keywords": "testing abc",
   "author": "James Heggie",
   "title": "Testing Pandoc Markdown",
-  "file": "www/tests/test.html",
+  "file": "simple-kb/tests/test.html",
   "description": "A testing page of markdown"
 }
