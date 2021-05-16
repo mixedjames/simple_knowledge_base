@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>James' Simple Notes</title>
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
   <link rel="stylesheet" type="text/css" href="simple-kb/css/main.css">
+$if(stylesheet)$
+  <link rel="stylesheet" type="text/css" href="$stylesheet$">
+$endif$
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+  <meta name="description" content="$description-meta$" />
+$endif$
 
 </head>
-<body class="theme-1">
+<body class="$if(theme)$$theme$$else$theme-1$endif$">
 
   <section id="content">
     <div id="content-header">
       <a href="" id="content-open-search"><img src="simple-kb/img/bars.svg" width="40"></a>
-      <h1 id="content-title">Mixed James</h1>
+      <a href="$base-url$" id="content-title-link">
+        <h1 id="content-title">$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</h1>
+      </a>
     </div>
     <div id="content-main-area">
       <div id="content-page-container"></div>
@@ -23,7 +40,9 @@
   <section id="search">
     <div id="search-header">
       <a href="" id="search-close"><img src="simple-kb/img/cross.svg" width="40"></a>
-      <h1 id="search-title">Mixed James</h1>
+      <a href="$base-url$" id="search-title-link">
+        <h1 id="search-title">$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</h1>
+      </a>
     </div>
 
     <div id="search-main-area">
@@ -35,8 +54,13 @@
         <input type="search "id="search-term" placeholder="Type to search">
       </form>
 
+      <div id="search-instructions">
+      $body$
+      </div>
+
       <div id="search-results">
       </div>
+
     </div>
     </div>
   </section>

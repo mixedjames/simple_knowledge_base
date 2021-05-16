@@ -2,6 +2,7 @@ import Fuse from '../lib/fuse/fuse.esm.min.js'
 
 let index = null;
 let fuse = null;
+let pageTitle = document.title;
 
 SetupSearchButtons();
 SetupSearchForm();
@@ -62,24 +63,32 @@ function SetupSearchForm() {
 
       const output = document.getElementById('search-results');
       output.innerHTML = "";
-      fuse.search(e.target.value).forEach(function(e) {
 
-        const f = document.createDocumentFragment();
-        const link = document.createElement("a");
-        const title = document.createElement("h3");
-        const desc = document.createElement("p");
+      if (e.target.value.length > 0) {
+        ById('search-instructions').style.display = 'none';
 
-        link.href = encodeURI("?f=" + e.item.file);
+        fuse.search(e.target.value).forEach(function(e) {
 
-        title.innerText = e.item.title;
-        desc.innerText = e.item.description;
+          const f = document.createDocumentFragment();
+          const link = document.createElement("a");
+          const title = document.createElement("h3");
+          const desc = document.createElement("p");
 
-        link.appendChild(title);
-        link.appendChild(desc);
+          link.href = encodeURI("?f=" + e.item.file);
 
-        f.appendChild(link);
-        output.appendChild(f);
-      });
+          title.innerText = e.item.title;
+          desc.innerText = e.item.description;
+
+          link.appendChild(title);
+          link.appendChild(desc);
+
+          f.appendChild(link);
+          output.appendChild(f);
+        });
+      }
+      else {
+        ById('search-instructions').style.display = 'block';
+      }
     }, 200);
   });
 
@@ -123,7 +132,7 @@ function loadPage(name) {
         container.innerHTML = "";
         container.innerHTML = data;
 
-        document.title = "James' Simple Notes - " + page.title;
+        document.title = pageTitle + " - " + page.title;
         history.pushState({ file: name }, document.title, encodeURI("?f=" + name));
 
         resolve();

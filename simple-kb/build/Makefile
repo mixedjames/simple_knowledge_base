@@ -25,14 +25,14 @@ VPATH = ../../
 simple-kb/css/%.css : simple-kb/less/%.less
 	lessc $< ../../$@
 
-index.json: $(DST)
+index.json: $(DST) index.html
 	cd ../.. && jq -s . $(patsubst %.md,%.json,$(SRC)) > index.json
+
+index.html: simple-kb/build/pandoc-template-index.html index.md
+	pandoc --template pandoc-template-index.html ../../index.md -o ../../index.html
 
 touch:
 	cd ../.. && touch $(SRC)
 
 install-tests:
 	cp ../tests/files.lst ../../
-
-install:
-	cp ../index.html ../../
