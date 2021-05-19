@@ -14,7 +14,7 @@ fetch('index.json')
     index = data;
 
     fuse = new Fuse(index, {
-      includeScore: true, keys: ['keywords', 'title', 'description']
+      includeScore: true, keys: ['keywords', 'title', 'description', 'subtitle']
     });
 
     loadFirstPage();
@@ -77,7 +77,7 @@ function SetupSearchForm() {
           link.href = encodeURI("?f=" + e.item.file);
 
           title.innerText = e.item.title;
-          desc.innerText = e.item.description;
+          desc.innerText = (e.item.description) ? e.item.description : e.item.subtitle;
 
           link.appendChild(title);
           link.appendChild(desc);

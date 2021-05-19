@@ -1,7 +1,6 @@
 
 ## Directory Structure
 
-
 Note: three files are mandated here but otherwise clients can do what
       they like here. The three files are:
 (1) index.html

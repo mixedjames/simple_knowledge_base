@@ -1,4 +1,5 @@
 SRC = \
 	simple-kb/tests/test.md \
 	simple-kb/tests/table-test/table-test.md \
-	simple-kb/tests/format-test/test.md
+	simple-kb/tests/format-test/test.md \
+	simple-kb/tests/word-test/word-test.docx
